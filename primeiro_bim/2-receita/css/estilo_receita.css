@@ -1,0 +1,24 @@
+body {
+  font-family: Sans-Serif;
+  font-size: 20px;
+  background-color: rgb(199, 199, 187);
+}
+		
+.container {
+	width: 720px;
+	height: auto;
+	background-color: rgb(227, 228, 224);
+	border-radius: 10px;
+	margin: 0 auto;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+.container a{
+	color: rgb(127, 134, 123);
+	text-decoration: none;
+}
+
+img {
+	border-radius: 10px;
+}
