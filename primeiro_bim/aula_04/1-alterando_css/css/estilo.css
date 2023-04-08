@@ -1,0 +1,70 @@
+body {
+	font-family: Consolas, Courier, monospace;
+	background-color: black;
+	color: green;
+}
+
+header {
+	width: 100%;
+	height: 150px;
+	border: 2px solid green;
+}
+
+header div {
+	margin: 20px;
+	float: left;
+	width: 30%;
+	height: 90px;
+	text-align: center;
+	border: 2px solid green;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+a {
+	color: green;
+	text-decoration: none;
+	font-size: 2em;
+}
+
+a div:hover {
+	background-color: green;
+	color: black;
+}
+
+article {
+	text-align: center;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+p {
+	font-size: 1.5em;
+}
+
+#bem-vindo {
+	display: inline-block;
+}
+
+.digitado {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: digitando 1.5s steps(30, end) forwards, piscando 0.5s infinite;
+  border-right: 5px solid green;
+}
+
+@keyframes digitando {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes piscando {
+	0% {border-right-color: transparent}
+  	50% {border-right-color: green}
+  	100% {border-right-color: transparent}
+}
