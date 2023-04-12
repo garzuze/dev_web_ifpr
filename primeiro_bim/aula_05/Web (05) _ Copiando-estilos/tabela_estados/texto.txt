@@ -1,0 +1,35 @@
+Demografia Brasileira
+
+Estados mais populosos das regiões Sudeste e Sul e suas cidades mais populosas
+
+Estados	Cidades
+
+Sudeste
+	São Paulo
+		São Paulo
+		Campinas
+		São José dos Campos
+	Rio de Janeiro
+		Rio de Janeiro
+		São Gonçalo
+		Duque de Caxias
+	Minas Gerais
+		Belo Horizonte
+		Uberlândia
+		Contagem
+Sul	
+	Paraná
+		Curitiba
+		Londrina
+		Maringá
+	Rio Grande do Sul
+		Porto Alegre
+		Caxias do Sul
+		Canoas
+	Santa Catarina
+		Joinville
+		Florianópolis
+		Blumenau
+
+Estimativas da população residente nos municípios brasileiros com data de referência em 1 de julho de 2021.
+Instituto Brasileiro de Geografia e Estatística (IBGE).

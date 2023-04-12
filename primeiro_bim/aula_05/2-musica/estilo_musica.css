@@ -1,0 +1,31 @@
+body {
+	font-family: Calibri;
+}
+
+#container {
+	margin: 0 auto;
+	width: 80%;
+}
+
+h1 {
+	font-size: 3em;
+	color: #fa6409;
+	text-shadow: 1px 1px 1px gray;
+}
+
+h2 {
+	font-size: 2em;
+	color: #b8b323;
+}
+
+table {
+	color: #828995;
+	font-size: 1.3em;
+	border-spacing: 40px 0;
+}
+
+.direita {
+	text-align: right;
+	color: #a3a5ac;
+	margin-right: 10px;
+}

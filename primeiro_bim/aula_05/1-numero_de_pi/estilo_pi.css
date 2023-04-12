@@ -1,0 +1,38 @@
+body {
+	font-family: Calibri;
+}
+
+#container {
+	margin: 0 auto;
+	width: 90%;
+	padding: 20px;
+}
+
+h1 {
+	font-size: 2.1em;
+}
+
+p, li {
+	line-height: 1.5em;
+}
+
+#lista {
+/*	margin negativa para alinhar com o restante do texto acima*/
+	margin: -20px 0px;
+	float: left;
+	padding: 0;
+}
+
+#pi {
+/*	float left também, para os elementos ficarem "colados"*/
+	float: left;
+/*	Coloquei a div do tamanho restante do lado da lista, e centralizei a imagem*/
+	width: 450px;
+	text-align: center;
+}
+
+#pi img {
+	opacity: 0.3;
+	width: 200px;
+	height: 150px;
+}
