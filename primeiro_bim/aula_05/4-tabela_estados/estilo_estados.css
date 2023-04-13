@@ -1,0 +1,54 @@
+body {
+	font-family: Calibri;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(to top, #ffffff 82%, #dbe4ad 100%);
+	background-repeat: no-repeat;
+}
+
+table {
+	border: 1px solid #a7c481;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+p {
+	text-align: right;
+	font-style: italic;
+}
+
+h1 {
+	color: #524b11;
+}
+
+th {
+	color: white;
+	background-color: #a7c941;
+	border: 1px solid #a7c481;
+	text-align: left;
+}
+
+#main {
+	margin: 0 auto;
+	width: 90%;
+}
+
+.regiao {
+	background-color: #dff5b5;
+	text-align: center;
+	width: 20%;
+	padding: 20px;
+	border: 1px solid #a7c481;
+}
+
+.estado {
+	background-color: #ebf3d2;
+	width: 40%;
+	border: 1px solid #a7c481;
+}
+
+.cidade {
+	background-color: #f9faec;
+	width: 40%;
+	border: 1px solid #a7c481;
+}
