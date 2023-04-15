@@ -1,0 +1,41 @@
+body {
+	font-family: Calibri;
+}
+
+table {
+	width: 92%;
+	margin: 10px auto;
+	line-height: 1.4em;
+}
+
+h1 {
+	font-size: 1.5em;
+	margin-top: 32px;
+	color: #192f5d;
+	text-align: center;
+}
+
+#main {
+	background: linear-gradient(#f1f0fe, #ffffff);
+	margin: 30px auto;
+	border-radius: 30px;
+	border: 1px solid #dcdae5;
+	width: 605px;
+	height: 100%;
+	box-shadow: 10px 10px 10px lightgray;
+}
+
+#quadrado {
+	border: 3px solid #9da4bd;
+	margin: 30px;
+}
+
+.key {
+	width: 28%;
+	color: #4f598c;
+}
+
+.topico {
+	background-color: #adcce9;
+	text-align: center;
+}
