@@ -5,6 +5,8 @@ body {
 	background-color: #f5f7fa;
 }
 
+/*Cabeçalho com nome e ícones de redes sociais*/
+
 header {
 	display: flex;
 	justify-content: space-between;
@@ -26,7 +28,9 @@ header {
 
 i{
 	margin: 0 5px;
-} 
+}
+
+/*Corpo do site*/
 
 main {
 	border-radius: 10px;
@@ -35,6 +39,8 @@ main {
 	height: 100%;
 	box-shadow: 10px 10px 30px gray;
 }
+
+/*Banner com foto responsiva*/
 
 #banner {
 	display: inline-flex;
@@ -46,6 +52,8 @@ main {
 	background-position: center;
 	background-repeat: no-repeat;
 }
+
+/*Configuração para foto pessoal com animação*/
 
 #personal-pic {
 	margin: 100px auto;
@@ -63,6 +71,8 @@ main {
     border-radius: 100%;
     border: 3px solid white;
 }
+
+/*Configuração do meu nome com animação de digitação*/
 
 #my-name {
 	display: inline-block;
@@ -88,16 +98,17 @@ main {
   	100% {border-right-color: transparent}
 }
 
+/*Configurando restante dos conteudos*/
+/*Essas classes vão fazer mais sentido quando a tela for maior*/
+
 .info-left {
 	margin: 0 auto;
 	width: 90%;
 }
 
 .info-right {
-	border: 2px solid gray;
 	margin: 0 auto;
-	padding: 7px;
-	border-radius: 5px;
+	padding: 15px;
 	width: 90%;
 }
 
@@ -112,4 +123,29 @@ main {
 
 .info-left img {
 	margin: 0 5px;
+}
+
+/*Configurando responsividade para desktop*/
+
+@media only screen and (min-width: 740px) {
+	body {
+		font: 18px "Segoe UI";
+	}
+	header, main {
+		width: 80%;
+	}
+
+	.display-flex {
+		display: flex;
+	}
+
+	.info-left {
+		padding: 15px;
+		width: 50%;
+	}
+
+	.info-right {
+		float: right;
+		width: 50%;
+	}
 }
