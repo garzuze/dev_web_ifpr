@@ -49,11 +49,41 @@ main {
 	margin: 100px auto;
 	width: 200px;
 	height: 200px;
+	animation: fade-in 1.5s;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; height: 0}
+  100% { opacity: 1; height: 200px}
 }
 
 #personal-pic img{
     border-radius: 100%;
     border: 3px solid white;
+}
+
+#my-name {
+	display: inline-block;
+}
+
+.digitado {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: digitando 1.5s steps(30, end) forwards, piscando 0.5s infinite;
+  border-right: 5px solid black;
+  margin: 0 auto;
+}
+
+@keyframes digitando {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes piscando {
+	0% {border-right-color: transparent}
+  	50% {border-right-color: black;}
+  	100% {border-right-color: transparent}
 }
 
 .info-left {
