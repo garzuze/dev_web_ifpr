@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+	<title>Formulários: Exemplos</title>
+	<meta charset="UTF-8"/>	
+</head>
+<style>
+h1{
+	text-align:center;
+}
+
+h2{
+	font-size:14pt;
+	border-top: 1px dashed black;
+	margin-top: 40px;
+	padding-top: 20px;
+}
+
+code {
+	display: block;
+	color: #777;
+	margin: 10px 0px 10px 0px;
+}
+</style>
+
+<body>
+
+<h1>Outros tipos de entrada (além do input)!</h1>
+
+
+<h2>Select (menu de seleção, combobox, spinner, lista drop-down)</h2>
+<code>&lt;select&gt; &lt;option value="valor"&gt;&lt;/option&gt;Valor&lt;/select&gt;</code>
+	<form action="#">
+		<label for="conceito">Conceito:</label>
+		<select id="conceito" name="conceito">
+			<option value="A">A</option>
+			<option value="B">B</option>
+			<option value="C">C</option>
+			<option value="D">D</option>
+		</select>
+	</form>
+
+
+<h2>Textarea (área de texto, campo de texto)</h2>
+<code>&lt;textarea rows="5" cols="40"&gt;...&lt;/textarea&gt;</code>
+	<form action="#">
+		<textarea name="msg" rows="5" cols="40">Deixe seu comentário aqui...</textarea>
+	</form>
+
+<h2>Fieldset e Legend (Conjunto de campos e legenda)</h2>
+<code>&lt;fieldset&gt;&lt;legend&gt;Legenda&lt;/legend&gt;...&lt;/fieldset&gt;</code>
+	<form action="#">
+		<fieldset>
+			<legend>Nome completo:</legend>
+			<label for="nome">Primeiro nome:</label><br>
+			<input type="text" id="nome" name="nome"><br>
+			<label for="nomemeio">Nome(s) do meio:</label><br>
+			<input type="text" id="nomemeio" name="nomemeio"><br>
+			<label for="sobrenome">Sobrenome:</label><br>
+			<input type="text" id="sobrenome" name="sobremnome"><br>		
+		</fieldset>
+	</form>
+
+
+<h2>Datalist (lista de itens/dados)</h2>
+<code>&lt;input list="lista"/&gt;&lt;datalist id="lista"&gt;&lt;option value="Item"&gt;&lt;/datalist&gt;</code>
+	<form action="#">
+		<input list="componentes" name="componente">
+		<datalist id="componentes">
+			<option value="Algoritmos">
+			<option value="Banco de Dados">
+			<option value="Desenvolvimento Web">
+			<option value="Desenvolvimento para Dispositivos Móveis">
+		</datalist>
+		<input type="submit"/>
+	</form>
+
+<h2>Button (botão)</h2>
+<code>&lt;button type="button"&gt;...&lt;/button&gt;</code>
+	<button type="button" onclick="alert('Você é incrível! &#129505;')">Aperta!</button>
+
+
+
+</body>
+</html>
