@@ -4,13 +4,49 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Exercício D</title>
+
+	<style type="text/css">
+		table {
+			border: 1px solid gray;
+		}
+
+		tr, td {
+			line-height: 2em;
+		}
+
+	</style>
 </head>
 <body>
-	<form>
+	<form action="#" method="post">
 		<table>
 			<tr>
 				<td>
-					<label>
+					<label for="nome">Nome:</label>
+				</td>
+				<td>
+					<input type="text" name="nome" id="nome">
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<label for="senha">Senha:</label>
+				</td>
+				<td>
+					<input type="password" name="senha" id="senha">
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2" style="text-align: right;">
+					<input type="checkbox" name="check_conectado" id="check_conectado">
+					<label for="check_conectado">Mantenha-me conectado</label>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2" style="text-align: right;">
+					<input type="submit" name="entrar" id="entrar" value="Entrar">
 				</td>
 			</tr>
 		</table>
