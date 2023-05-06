@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercício E</title>
+
+	<style type="text/css">
+		table {
+			border: 1px solid black;
+			border-collapse: collapse;
+			line-height: 2em;
+		}
+
+		td {
+			padding: 15px;
+		}
+
+		tr {
+			border-bottom: 1px solid black;
+		}
+
+		.right {
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+
+	<form action="#" method="post">
+		<table>
+			<tr>
+				<td class="right">
+					<label for="nome">Nome do candidato:</label>
+				</td>
+				<td>
+					<input type="text" name="nome" id="nome">
+				</td>
+			</tr>
+
+			<tr>
+				<td class="right">
+					<label for="curriculo">Currículo:</label>
+				</td>
+				<td>
+					<input type="file" name="curriculo" id="curriculo">
+				</td>
+			</tr>
+
+			<tr>
+				<td class="right">Competências:</td>
+				<td>
+					<input type="checkbox" name="banco_de_dados" id="banco_de_dados">
+					<label for="banco_de_dados">Banco de Dados</label>
+
+					<br>
+
+					<input type="checkbox" name="documentacao" id="documentacao">
+					<label for="documentacao">Documentação</label>
+
+					<br>
+
+					<input type="checkbox" name="interface" id="interface">
+					<label for="interface">Criação de Interface</label>
+
+					<br>
+
+					<input type="checkbox" name="programacao" id="programacao">
+					<label for="programacao">Linguagem de Programação</label>
+
+					<br>
+
+					<input type="checkbox" name="requisitos" id="requisitos">
+					<label for="requisitos">Teste de Requisitos</label>
+				</td>
+			</tr>
+
+			<tr>
+				<td class="right">Informações adicionais: </td>
+				<td>
+					<textarea name="msg" rows="5" cols="40" style="font-style: italic;">[Coloque aqui outras informações relevantes sobre seu perfil profissional.]</textarea>
+				</td>
+			</tr>
+
+			<tr>
+				<td class="right" colspan="2"> 
+					<input type="submit" name="candidatar" value="Candidatar-se">
+				</td>
+			</tr>
+
+		</table>
+	</form>
+
+</body>
+</html>
