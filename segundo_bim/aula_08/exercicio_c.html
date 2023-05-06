@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercício C</title>
+	<style type="text/css">
+		table {
+			border-collapse: collapse;
+			border: 2px solid #b4b1e5;
+		}
+
+		th, td {
+			padding: 10px;
+			border: 2px solid #b4b1e5;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<table>
+			<tr>
+				<td>
+					<label for="apelido">Apelido: </label>
+				</td>
+				<td>
+					<input type="text" name="apelido" id="apelido">
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<label for="pokemon">Pokémon:</label>
+				</td>
+				<td>
+					<input type="radio" name="pokemon" id="bulbasaur">
+					<label for="bulbasaur">
+						<img src="imagens/bulbasaur.jpg" width="80px">
+					</label>
+					<br>
+
+					<input type="radio" name="pokemon" id="charmander">
+					<label for="charmander">
+						<img src="imagens/charmander.jpg" width="80px">
+					</label>
+
+					<br>
+
+					<input type="radio" name="pokemon" id="squirtle">
+					<label for="squirtle">
+						<img src="imagens/squirtle.jpg" width="80px">
+					</label>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2" style="text-align: right;">
+					<input type="submit" name="comecar" value="Começar!">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
