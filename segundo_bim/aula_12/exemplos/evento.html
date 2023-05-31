@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+
+<body>
+ 
+<script>
+function validaEmail() {
+  var email = document.getElementById("email").value;
+
+  if (email !== "teste") {
+    document.getElementById("emailMsg").innerHTML="Insira um e-mail válido";
+  } else {
+    document.getElementById("emailMsg").innerHTML="";
+  }
+}
+</script>
+
+<input type="text" id="email" onBlur="validaEmail()" />
+<p id="emailMsg"></p>
+
+</body>
+</html> 

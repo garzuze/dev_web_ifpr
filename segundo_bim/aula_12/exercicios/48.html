@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+	<meta charset="UTF-8"/>
+</head>
+
+<body onload="startTime()">
+
+<h1>Exercício:</h1>
+<h2>Crie um relógio</h2>
+
+<script>
+function startTime() {
+	// Obtém o horário atual
+    var data = new Date();
+    var h = data.getHours();
+    var m = data.getMinutes();
+    var s = data.getSeconds();
+    m = AdicionaZero(m); // Adiciona zero antes de segundos ou minutos de 0 a 9
+    s = AdicionaZero(s);
+    
+	// Joga a hora montada no elemento
+	document.getElementById('demo').innerHTML = h + ":" + m + ":" + s; 
+    
+	// A função chama a ela mesma a cada meio segundo. Recursividade, baby! Prazer!
+	setTimeout(startTime, 500);
+}
+
+function AdicionaZero(i) {
+    if (i < 10){
+		i = "0" + i;
+	}
+    return i;
+}
+</script>
+
+<h3 id="demo"></h3>
+
+</body>
+</html>

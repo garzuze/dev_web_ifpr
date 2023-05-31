@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+	<meta charset="UTF-8"/>
+</head>
+
+<body>
+
+	<h1>Exercício:</h1>
+	<h2>Mostre o texto "Tomas Carado, 25 anos", utilizando três variáveis (nome, sobrenome e idade) e concatenando a saída.</h2>
+
+	<p id="demo">Mostre o resultado aqui</p> 
+	<button onClick="nome('Tomas', 'Carado', 25)">Mostrar resultado</button>
+
+	<script>
+		
+		function nome(nome, sobrenome, idade){
+			var info = nome + " " + sobrenome + ", " + idade + " anos";
+			document.getElementById("demo").innerHTML = info;
+		}
+	</script>
+
+</body>
+</html>

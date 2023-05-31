@@ -1,0 +1,21 @@
+<html>
+<head>
+</head>
+
+<body id="corpo"> 
+
+<script>
+function trocaFundo(elemento) {  
+  if (elemento.id == "radio_css_azul") {
+    document.getElementById("corpo").style.background="#ddf";  
+  } else {
+    document.getElementById("corpo").style.background="#fdd";  
+  }
+}
+</script>
+
+<input type="radio" name="radio_css" id="radio_css_azul" onClick="trocaFundo(this)" checked /> Fundo Azul <br/>
+<input type="radio" name="radio_css" id="radio_css_verm" onClick="trocaFundo(this)" /> Fundo Vermelho
+
+</body>
+</html> 

@@ -1,0 +1,27 @@
+<html>
+<head>
+</head>
+
+<body>
+ 
+<script>
+function trocaImagem() {
+  
+  imagem = document.getElementById("imagem_aleatoria")
+  imagem_source = imagem.getAttribute("src")
+  
+  if (imagem_source.match("1")) {
+    imagem.src = "2.jpeg";
+  } else {
+    imagem.src = "1.jpeg";
+  }
+  
+}
+</script>
+
+<img id="imagem_aleatoria" src="1.jpeg" alt="imagem"/>
+<br/>
+<input type="button" id="bt_troca_imagem" onClick="trocaImagem()" value="Troca!"/>
+
+</body>
+</html> 

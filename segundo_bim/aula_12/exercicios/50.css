@@ -1,0 +1,45 @@
+nav {
+	text-align: center;
+}
+
+#menu_links {
+	background-color: #fdd;
+	float: left;
+	width: 80px;
+	height: 90px;
+	outline: 1px solid #d99;
+}
+
+#menu_descricao {
+	background-color: #fcc;
+	float: left;
+	width: 140px;
+	height: 90px;	
+	outline: 1px solid #d99;
+	color: #755;
+}
+
+#menu_descricao_inner{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#menu_links div {
+	height: 30px;
+	width: 80px;
+	outline: 1px solid #d99;
+	line-height: 30px;
+}
+
+#menu_links div:hover {
+	background-color: #fee;
+}
+
+a {
+	color: #944;
+}
+
+a:active {
+	color: #000;
+}

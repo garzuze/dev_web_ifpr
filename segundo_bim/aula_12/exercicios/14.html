@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+	<meta charset="UTF-8"/>
+</head>
+
+<body>
+
+<script>
+function trocaImagem() {
+    var image = document.getElementById('imagem');
+    if (image.src.match("on")) {
+        image.src = "14_off.png";
+    } else {
+        image.src = "14_on.png";
+    }
+}
+</script>
+
+<h1>Exercício:</h1>
+<h2>Clique na lâmpada para acender/apagar a luz!</h2>
+
+<img id="imagem" onclick="trocaImagem()" src="14_off.png" width="100">
+
+
+
+</body>
+</html>

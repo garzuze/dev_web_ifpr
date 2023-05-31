@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+
+<body>
+ 
+<script>
+
+function foca(id) {
+  id.style.background="#eef";
+}
+
+function desfoca(id) {
+  id.style.background="#fff";
+}
+</script>
+
+<input type="text" id="email" onBlur="desfoca(this)" onFocus="foca(this)" />
+<p id="emailMsg"></p>
+
+</body>
+</html> 

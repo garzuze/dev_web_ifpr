@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>Javascript - Exemplos</title>
+<meta charset="UTF-8"/>
+
+<style type="text/css">
+.msg {
+	display: inline;
+	color: #a00;
+	font-size: 90%;
+}
+</style>
+
+<script>
+
+function validaForm() {
+
+  var envia = true;
+  
+  //Validar nome
+  var nome = document.forms["form"]["nome"].value;
+  if (nome == null || nome == "") {
+	document.getElementById("msg_nome").innerHTML="Preencha o nome";
+	envia = false;
+  } else {
+	document.getElementById("msg_nome").innerHTML="";
+  }
+
+  //Validar e-mail
+  var email = document.forms["form"]["email"].value;
+  var pos_arroba = email.indexOf("@");
+  var pos_ponto = email.lastIndexOf(".");
+  if (pos_arroba < 1 || pos_ponto < pos_arroba + 2 || pos_ponto + 2 >= email.length) {
+    document.getElementById("msg_email").innerHTML="Endereço de e-mail inválido";
+    envia = false;;
+  } else {
+	document.getElementById("msg_email").innerHTML="";
+  }
+
+  if (envia == false) {
+	return false;
+  }
+}
+
+function validaDigitacao(campo) {
+
+  var id_input = "input_"+campo;
+  var id_msg = "msg_"+campo;
+
+  var valor = document.getElementById(id_input).value;
+
+	switch (campo) {
+	
+	case "nome":
+		if (valor == "" || valor == null) {
+			document.getElementById(id_input).style.padding="2px";
+			document.getElementById(id_input).style.border="1px solid #DAA";
+			document.getElementById(id_input).style.color="#700";
+		} else {
+			document.getElementById(id_input).style.padding="2px";
+			document.getElementById(id_input).style.border="1px solid #ADA";
+			document.getElementById(id_input).style.color="#070";
+			document.getElementById("msg_nome").innerHTML="";
+		}
+		break;
+	case "email":
+		var pos_arroba = valor.indexOf("@");
+		var pos_ponto = valor.lastIndexOf(".");
+		if (pos_arroba < 1 || pos_ponto < pos_arroba + 2 || pos_ponto + 2 >= valor.length) {
+			document.getElementById(id_input).style.padding="2px";
+			document.getElementById(id_input).style.border="1px solid #DAA";
+			document.getElementById(id_input).style.color="#700";
+		} else {
+			document.getElementById(id_input).style.padding="2px";
+			document.getElementById(id_input).style.border="1px solid #ADA";
+			document.getElementById(id_input).style.color="#070";
+			document.getElementById("msg_email").innerHTML="";
+		}
+		break;
+	default:
+   }
+ 
+  
+}
+
+</script>
+
+</head>
+
+<body>
+
+<form name="form" action="valida.php" onsubmit="return validaForm()" method="post">	
+	Nome: <input type="text" name="nome" id="input_nome" onkeyup="validaDigitacao('nome')"/>	
+	<p class="msg" id="msg_nome"></p>	<br />
+	
+	Email: <input type="text" name="email" id="input_email" onkeyup="validaDigitacao('email')"/>	
+	<p class="msg" id="msg_email"></p>	<br />
+
+	<input type="submit" value="Enviar">
+</form>
+
+</body>
+
+</html>
