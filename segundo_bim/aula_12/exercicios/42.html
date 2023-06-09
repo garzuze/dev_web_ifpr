@@ -7,32 +7,32 @@
 
 <body>
 
-<h1>Exercício:</h1>
-<h2>Adicione "listeners" ao botão para os eventos de clique, entrada e saída de mouse.</h2>
+    <h1>Exercício:</h1>
+    <h2>Adicione "listeners" ao botão para os eventos de clique, entrada e saída de mouse.</h2>
 
-<p>Esse exercício já está feito! ;)</p>
+    <p>Esse exercício já está feito! ;)</p>
 
-<button id="botao">Experimente</button>
-<p id="demo"></p>
+    <button id="botao">Experimente</button>
+    <p id="demo"></p>
 
-<script>
-var botao = document.getElementById("botao");
-botao.addEventListener("click", mouseClique);
-botao.addEventListener("mouseover", mouseDentro);
-botao.addEventListener("mouseout", mouseFora);
+    <script>
+        var botao = document.getElementById("botao");
+        botao.addEventListener("click", mouseClique);
+        botao.addEventListener("mouseover", mouseDentro);
+        botao.addEventListener("mouseout", mouseFora);
 
-function mouseClique() {
-    document.getElementById("demo").innerHTML += "Apertou!<br>";
-}
+        function mouseClique() {
+            document.getElementById("demo").innerHTML += "Apertou!<br>";
+        }
 
-function mouseDentro() {
-    document.getElementById("demo").innerHTML += "Entrou!<br>";
-}
+        function mouseDentro() {
+            document.getElementById("demo").innerHTML += "Entrou!<br>";
+        }
 
-function mouseFora() {
-    document.getElementById("demo").innerHTML += "Saiu!<br>";
-}
-</script>
+        function mouseFora() {
+            document.getElementById("demo").innerHTML += "Saiu!<br>";
+        }
+    </script>
 
 </body>
 </html>

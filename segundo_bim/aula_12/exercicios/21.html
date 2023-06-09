@@ -7,17 +7,17 @@
 
 <body>
 
-<h1>Exercício:</h1>
-<h2>Crie a função "aleatorio()" para gerar um número aleatório entre 0 e 10 e mostre no local adequado.</h2>
+	<h1>Exercício:</h1>
+	<h2>Crie a função "aleatorio()" para gerar um número aleatório entre 0 e 10 e mostre no local adequado.</h2>
 
-<button onclick="aleatorio()">Gerar!</button>
-<p id="demo">Mostre o resultado aqui</p> 
+	<button onclick="aleatorio()">Gerar!</button>
+	<p id="demo">Mostre o resultado aqui</p> 
 
-<script>
-// Crie o código aqui
-// Dica: Use o método ".ramdom()" da classe "Math", que retorna um número entre 0 e 1.
-
-</script>
+	<script>
+		function aleatorio() {
+			document.getElementById("demo").innerHTML = Math.random(0, 10) * 10
+		}
+	</script>
 
 </body>
 </html>

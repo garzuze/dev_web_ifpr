@@ -7,24 +7,32 @@
 
 <body>
 
-<h1>Exercício:</h1>
-<h2>Crie um objeto de data e depois mostre a data no formato brasileiro e no formato internacional nos locais indicados</h2>
+	<h1>Exercício:</h1>
+	<h2>Crie um objeto de data e depois mostre a data no formato brasileiro e no formato internacional nos locais indicados</h2>
 
-<p id="dataBR">Exiba o resultado aqui!</p>
-<p id="dataMySQL">Exiba o resultado aqui!</p>
+	<p id="dataBR">Exiba o resultado aqui!</p>
+	<p id="dataMySQL">Exiba o resultado aqui!</p>
 
-<script>
-/* 
-getFullYear()	Returns the year (four digits)
-getMonth()	Returns the month (from 0-11)
-getDate()	Returns the day of the month (from 1-31)
+	<script>
+	// Agora eu percebi que já fiz isso no exercício anterior
+		function adicionaZeros(i) {
+			if (i < 10) {
+				i = `0${i}`
+			}
 
-getHours()	Returns the hour (from 0-23)
-getMinutes()	Returns the minutes (from 0-59)
-getSeconds()	Returns the seconds (from 0-59)
-*/
+			return i
+		}
 
-</script>
+		var dataBR = new Date()
+		var dia = adicionaZeros(dataBR.getDate())
+		var mes = dataBR.getMonth() + 1 // +1 porque o mês é iniciado no 0
+		var ano = dataBR.getFullYear()
+
+		var dataFormatadaBR = `Data BR: ${dia}/${adicionaZeros(mes)}/${ano}`
+		var dataMySQL = `Data internacional: ${adicionaZeros(mes)}/${dia}/${ano}`
+		document.getElementById("dataBR").innerHTML = dataFormatadaBR
+		document.getElementById("dataMySQL").innerHTML = dataMySQL
+	</script>
 
 </body>
 </html>

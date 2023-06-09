@@ -7,14 +7,19 @@
 
 <body>
 
-<h1>Exercício:</h1>
-<h2>Crie uma função "produto()", que mostra no local indicado o produto de 5 x 4.</h2>
+	<h1>Exercício:</h1>
+	<h2>Crie uma função "produto()", que mostra no local indicado o produto de 5 x 4.</h2>
 
-<p id="demo">Mostre o resultado aqui</p> 
+	<p id="demo">Mostre o resultado aqui</p> 
+	<button onclick="produto(5, 4)">Mostrar resultado</button>
 
-<script>
-// Crie o código aqui
-</script>
+	<script>
+		function produto(x, y){
+			var produto = x * y
+			document.getElementById("demo").innerHTML = produto;
+		}
+
+	</script>
 
 </body>
 </html>

@@ -7,15 +7,17 @@
 
 <body>
 
-<h1>Exercício:</h1>
-<h2>Utilize o método nativo ".push(valorASerInserido)" para adicionar o "6" ao array "nums"; depois, utilize o método nativo ".sort()" para ordenar o vetor; por fim, mostre o array no local indicado.</h2>
+	<h1>Exercício:</h1>
+	<h2>Utilize o método nativo ".push(valorASerInserido)" para adicionar o "6" ao array "nums"; depois, utilize o método nativo ".sort()" para ordenar o vetor; por fim, mostre o array no local indicado.</h2>
 
-<p id="demo">Exiba o resultado aqui!</p> 
+	<p id="demo">Exiba o resultado aqui!</p> 
 
-<script>
-var nums = [9,5,3,2,8,1,4,7];
-// Crie o código aqui...
-</script>
+	<script>
+		var nums = [9,5,3,2,8,1,4,7];
+		nums.push(6)
+		nums.sort()
+		document.getElementById("demo").innerHTML = nums
+	</script>
 
 </body>
 </html>

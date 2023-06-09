@@ -7,16 +7,18 @@
 
 <body>
 
-<h1>Exercício:</h1>
-<h2>Crie a função "mostraNome(nome)" que está sendo chamada, mostrando no local indicado "Olá, Mário!".</h2>
+	<h1>Exercício:</h1>
+	<h2>Crie a função "mostraNome(nome)" que está sendo chamada, mostrando no local indicado "Olá, Mário!".</h2>
 
-<p id="demo">Mostre o resultado aqui</p> 
+	<p id="demo">Mostre o resultado aqui</p>
+	<button onclick="mostraNome('Mário')">Mostrar resultado</button>
 
-<script>
-// Crie o código aqui
-
-document.getElementById("demo").innerHTML = mostraNome('Mário');
-</script>
+	<script>
+		function mostraNome(nome){
+			var saudacao = "Olá, " + nome + "!"
+			document.getElementById("demo").innerHTML = saudacao
+		}
+	</script>
 
 </body>
 </html>

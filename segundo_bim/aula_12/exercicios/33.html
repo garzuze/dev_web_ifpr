@@ -7,14 +7,24 @@
 
 <body>
 
-<h1>Exercício:</h1>
-<h2>Mostre no local indicado uma mensagem adequada de acordo com a hora do dia ("Bom dia", "Boa tarde" ou "Boa noite").</h2>
+	<h1>Exercício:</h1>
+	<h2>Mostre no local indicado uma mensagem adequada de acordo com a hora do dia ("Bom dia", "Boa tarde" ou "Boa noite").</h2>
 
-<p id="demo">Exiba o resultado aqui!</p> 
+	<p id="demo">Exiba o resultado aqui!</p> 
 
-<script>
-// Escreva o código aqui...
-</script>
+	<script>
+		var data = new Date()
+		if (data.getHours() < 12){
+			document.getElementById("demo").innerHTML = "Bom dia!"
+		}
+		if (data.getHours() < 18){
+			document.getElementById("demo").innerHTML = "Boa tarde!"
+		}
+		if (data.getHours() > 18){
+			document.getElementById("demo").innerHTML = "Boa noite!"
+		}
+
+	</script>
 
 </body>
 </html>

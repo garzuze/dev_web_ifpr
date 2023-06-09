@@ -7,17 +7,19 @@
 
 <body>
 
-<h1>Exercício:</h1>
-<h2>Crie a função "metrosPorSegundo(kmph)" que está sendo chamada, mostrando no local indicado a conversão de 36 km/h para m/s (3,6 km/h = 1 m/s).</h2>
+	<h1>Exercício:</h1>
+	<h2>Crie a função "metrosPorSegundo(kmph)" que está sendo chamada, mostrando no local indicado a conversão de 36 km/h para m/s (3,6 km/h = 1 m/s).</h2>
 
-<p id="demo">Mostre o resultado aqui</p> 
+	<p id="demo">Mostre o resultado aqui</p> 
 
-<script>
-// Crie o código aqui
-
-var kmPorHora = 36;
-document.getElementById("demo").innerHTML = kmPorHora + ' km/h = ' + metrosPorSegundo(kmPorHora) + 'm/s';
-</script>
+	<script>
+		var kmPorHora = 36;
+		function metrosPorSegundo(kmPorHora){
+			var ms =  kmPorHora / 3.6
+			return ms
+		}
+		document.getElementById("demo").innerHTML = kmPorHora + ' km/h = ' + metrosPorSegundo(kmPorHora) + 'm/s';
+	</script>
 
 </body>
 </html>

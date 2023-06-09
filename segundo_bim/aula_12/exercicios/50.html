@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Javascript</title>
-<meta charset="UTF-8"/>
-<link rel="stylesheet" href="50.css"/>
+	<title>Javascript</title>
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" href="50.css"/>
 </head>
 <body>
 
-<h1>Exercício</h1>
-<h2>Escreva a função "menuDescricao(paginaASerMostrada)" que mostra no local indicado a descrição da página a ser selecionada no menu quando o mouse é colocado sobre o link.</h2>
+	<h1>Exercício</h1>
+	<h2>Escreva a função "menuDescricao(paginaASerMostrada)" que mostra no local indicado a descrição da página a ser selecionada no menu quando o mouse é colocado sobre o link.</h2>
 
-<script>
+	<script>
 /* Conteúdo a ser mostrado na descrição:
 		Página Home 	> 'Visualize a página principal do site!',
 		Página Galeria 	> 'Veja nossas fotos!',
 		Página Contato 	> 'Quer falar com a gente? Entre em contato!'];
 */
+		function menuDescricao(page) {
+			switch (page) {
+				case "#home":
+					document.getElementById("menu_descricao_inner").innerHTML = 'Visualize a página principal do site!'
+					break
+				case "#galeria":
+					document.getElementById("menu_descricao_inner").innerHTML = 'Veja nossas fotos!'
+					break
+				case "#contato":
+					document.getElementById("menu_descricao_inner").innerHTML = 'Quer falar com a gente? Entre em contato!'
+					break
+			}
+		}
 
-//Escreva o código aqui...
-</script>
+	</script>
 
-<nav>
-	<div id="menu_links">
-		<div><a href="#home">Home</a></div>
-		<div><a href="#galeria">Galeria</a></div>
-		<div><a href="#contato">Contato</a></div>
-	</div>
+	<nav>
+		<div id="menu_links">
+			<div><a href="#home" onclick="menuDescricao('#home')">Home</a></div>
+			<div><a href="#galeria" onclick="menuDescricao('#galeria')">Galeria</a></div>
+			<div><a href="#contato" onclick="menuDescricao('#contato')">Contato</a></div>
+		</div>
 
-	<div id="menu_descricao">
-		<div id="menu_descricao_inner">Descrição aqui</div>
-	</div>
-</nav>
+		<div id="menu_descricao">
+			<div id="menu_descricao_inner"></div>
+		</div>
+	</nav>
 
 </body>
 </html>

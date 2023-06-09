@@ -7,23 +7,20 @@
 
 <body>
 
-<script>
-function atualizaTexto() {
-	// Crie o código aqui
-	
-	//Dica: Use a mesma ideia do exercício 23, mas desta vez "escute" o evento "onKeyUp"
-}
+	<script>
+		function atualizaTexto() {
+			var input = document.getElementById("nome").value
+			document.getElementById("demo").innerHTML = input
+		}
+	</script>
 
+	<h1>Exercício:</h1>
+	<h2>Crie a função "atualizaTexto()", que atualiza a cada tecla digitada o conteúdo do parágrafo "demo" com o texto digitado.</h2>
 
-</script>
+	<label>Nome</label>
+	<input type="text" name="nome" id="nome" onKeyUp="atualizaTexto()"/>
 
-<h1>Exercício:</h1>
-<h2>Crie a função "atualizaTexto()", que atualiza a cada tecla digitada o conteúdo do parágrafo "demo" com o texto digitado.</h2>
-
-<label>Nome</label>
-<input type="text" name="nome" id="nome" onKeyUp="atualizaTexto()"/>
-
-<p id="demo">Mostre o resultado aqui</p> 
+	<p id="demo">Mostre o resultado aqui</p> 
 
 </body>
 </html>

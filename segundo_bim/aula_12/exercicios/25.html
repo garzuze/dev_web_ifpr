@@ -7,22 +7,29 @@
 
 <body>
 
-<script>
-/* Dica de conversão:
-	Celsius = (Fahrenheit - 32)/1.8;
-	Fahrenheit = (Celsius * 1.8) + 32;
-*/
-</script>
+	<script>
+		function convertF(){
+			var celsius = document.getElementById("tempC").value
+			var fahrenheit = (celsius * 1.8) + 32
+			document.getElementById("tempF").value = Math.round(fahrenheit)
+		}
 
-<h1>Exercício:</h1>
-<h2>Faça um conversor de temperaturas; ao digitar em um campo, atualiza o outro com a temperatura convertida.</h2>
+		function convertC(){
+			var fahrenheit = document.getElementById("tempF").value
+			var celsius = (fahrenheit - 32) / 1.8
+			document.getElementById("tempC").value = Math.round(celsius)
+		}
+	</script>
 
-<h3>Conversor de temperaturas</h3>
-<label>Temperatura em Cº</label>
-<input type="text" name="nome" id="tempC" onKeyUp="trocaTempF()"/>
-<br/><br/>
-<label>Temperatura em Fº</label>
-<input type="text" name="nome" id="tempF" onKeyUp="trocaTempC()"/>
+	<h1>Exercício:</h1>
+	<h2>Faça um conversor de temperaturas; ao digitar em um campo, atualiza o outro com a temperatura convertida.</h2>
+
+	<h3>Conversor de temperaturas</h3>
+	<label>Temperatura em Cº</label>
+	<input type="text" name="tempC" id="tempC" onKeyUp="convertF()"/>
+	<br/><br/>
+	<label>Temperatura em Fº</label>
+	<input type="text" name="nome" id="tempF" onKeyUp="convertC()"/>
 
 </body>
 </html>

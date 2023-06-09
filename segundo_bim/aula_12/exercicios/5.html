@@ -7,20 +7,24 @@
 
 <body>
 
-<h1>Exercício:</h1>
-<h2>Mostre o texto "Tomas Carado, 25 anos", utilizando o objeto JSON "pessoa" declarado e concatenando a saída.</h2>
+    <h1>Exercício:</h1>
+    <h2>Mostre o texto "Tomas Carado, 25 anos", utilizando o objeto JSON "pessoa" declarado e concatenando a saída.</h2>
 
-<p id="demo">Mostre o resultado aqui</p> 
+    <p id="demo">Mostre o resultado aqui</p> 
+    <button onClick="info()">Mostrar resultado</button>
 
-<script>
-var pessoa = {
-    nome		: "Tomas",
-    sobrenome	: "Carado",
-    idade		: 25
-};
+    <script>
+        var pessoa = {
+            nome		: "Tomas",
+            sobrenome	: "Carado",
+            idade		: 25
+        };
 
-// Crie o código aqui
-</script>
+        function info(){
+            var info = pessoa.nome + " " + pessoa.sobrenome + ", " + pessoa.idade + " anos"
+            document.getElementById("demo").innerHTML = info;
+        }
+    </script>
 
 </body>
 </html>

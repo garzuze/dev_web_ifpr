@@ -7,14 +7,20 @@
 
 <body>
 
-<h1>Exercício:</h1>
-<h2>Utilize um laço de repetição para mostrar os números pares de 1 a 50 no local indicado</h2>
+	<h1>Exercício:</h1>
+	<h2>Utilize um laço de repetição para mostrar os números pares de 1 a 50 no local indicado</h2>
 
-<p id="demo">Exiba o resultado aqui!</p> 
+	<p id="demo">Exiba o resultado aqui!</p> 
 
-<script>
-// Escreva o código aqui...
-</script>
+	<script>
+		var loop = ""
+		
+		for (var i=1; i <= 50; i++) {
+			loop += i + "<br>" 
+		}
+
+		document.getElementById("demo").innerHTML = loop
+	</script>
 
 </body>
 </html>

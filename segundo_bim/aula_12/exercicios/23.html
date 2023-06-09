@@ -7,29 +7,22 @@
 
 <body>
 
-<script>
-function mostraEntrada() {
-	/*
-	Dica: Resolva em 2 linhas.
-	Linha 1: Declare uma variável e atribua o atributo ".value" do elemento input com a id "nome".
-	Linha 2: Insira o conteúdo da variável criada na linha 1 no parágrafo com id "demo".
-	*/;
-	
-	// Crie o código aqui
-}
+	<script>
+		function mostraEntrada(){
+			var nome = document.getElementById("nome").value
+			document.getElementById("demo").innerHTML = nome
+		}
+	</script>
 
+	<h1>Exercício:</h1>
+	<h2>Crie a função "mostraEntrada()", que usa o atributo ".value" para obter o valor digitado por um usuário e mostre no local adequado quando o botão for clicado.</h2>
 
-</script>
+	<label>Nome</label>
+	<input type="text" name="nome" id="nome"/>
 
-<h1>Exercício:</h1>
-<h2>Crie a função "mostraEntrada()", que usa o atributo ".value" para obter o valor digitado por um usuário e mostre no local adequado quando o botão for clicado.</h2>
+	<button onClick="mostraEntrada()">Mostrar</button>
 
-<label>Nome</label>
-<input type="text" name="nome" id="nome"/>
-
-<button onClick="mostraEntrada()">Mostrar</button>
-
-<p id="demo">Mostre o resultado aqui</p> 
+	<p id="demo">Mostre o resultado aqui</p> 
 
 </body>
 </html>

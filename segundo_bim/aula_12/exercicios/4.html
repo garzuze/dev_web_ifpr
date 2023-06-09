@@ -7,14 +7,20 @@
 
 <body>
 
-<h1>Exercício:</h1>
-<h2>Mostre no local indicado o resto da divisão de 10 por 3, usando duas variáveis (x e y).</h2>
+	<h1>Exercício:</h1>
+	<h2>Mostre no local indicado o resto da divisão de 10 por 3, usando duas variáveis (x e y).</h2>
 
-<p id="demo">Mostre o resultado aqui</p> 
+	<p id="demo">Mostre o resultado aqui</p> 
+	<button onClick="modulo(10, 3)">Mostrar resultado</button>
 
-<script>
-// Crie o código aqui
-</script>
+	<script>
+		
+		function modulo(x, y) {
+			var modulo = x % y;
+			document.getElementById("demo").innerHTML = modulo;
+		}
+
+	</script>
 
 </body>
 </html>

@@ -7,15 +7,21 @@
 
 <body>
 
-<h1>Exercício:</h1>
-<h2>Crie um array com 3 frutas e mostre no local indicado</h2>
+	<h1>Exercício:</h1>
+	<h2>Crie um array com 3 frutas e mostre no local indicado</h2>
 
-<p id="demo">Exiba o resultado aqui!</p> 
+	<p id="demo">Exiba o resultado aqui!</p> 
 
-<script>
-var frutas = ["Banana", "Pitaia", "Kino"];
-document.getElementById("demo").innerHTML = frutas;
-</script>
+	<script>
+		var frutas = ["Kiwi", "Banana", "Maça"];
+		var frutas_loop = ""
+
+		for (var fruta in frutas){
+			var frutas_loop = frutas_loop + frutas[fruta] + "<br> ";
+		}
+
+		document.getElementById("demo").innerHTML = frutas_loop;
+	</script>
 
 </body>
 </html>

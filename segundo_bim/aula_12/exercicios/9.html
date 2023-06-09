@@ -7,17 +7,19 @@
 
 <body>
 
-<h1>Exercício:</h1>
-<h2>Crie a função "produto(a,b)" que está sendo chamada, mostrando no local indicado o produto de 4 x 5.</h2>
+	<h1>Exercício:</h1>
+	<h2>Crie a função "produto(a,b)" que está sendo chamada, mostrando no local indicado o produto de 4 x 5.</h2>
 
-<p id="demo">Mostre o resultado aqui</p> 
+	<p id="demo">Mostre o resultado aqui</p> 
 
-<script>
-// Crie o código aqui
-
-var n1 = 4, n2 = 5;
-document.getElementById("demo").innerHTML = n1 + ' x ' + n2 + ' = ' + produto(n1,n2);
-</script>
+	<script>
+		var n1 = 4, n2 = 5;
+		function produto(a, b){
+			var produto = a * b
+			return produto
+		}
+		document.getElementById("demo").innerHTML = n1 + ' x ' + n2 + ' = ' + produto(n1,n2);
+	</script>
 
 </body>
 </html>

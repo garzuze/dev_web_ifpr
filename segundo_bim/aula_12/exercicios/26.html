@@ -5,16 +5,42 @@
 	<meta charset="UTF-8"/>
 </head>
 
-<body>
+	<body>
 
-<h1>Exercício:</h1>
-<h2>Crie um objeto de data e depois mostre a data e a hora atual no local indicado.</h2>
+	<h1>Exercício:</h1>
+	<h2>Crie um objeto de data e depois mostre a data e a hora atual no local indicado.</h2>
 
-<p id="demo">Exiba o resultado aqui!</p>
+	<p id="demo">Exiba o resultado aqui!</p>
+	<h3>Data formatada:</h3>
+	<p id="data"></p>
 
-<script>
-// Crie o código aqui...
-</script>
+	<script>
+		document.getElementById("demo").innerHTML = Date()
+
+		// Não gostei do jeito que exibem a data por padrão, então fiz do meu jeito
+
+		// As datas retornam variáveis int, então não tem 0 à esquerda.
+		// Fiz essa função que retorna uma string do número com o 0 à esquerda se necessário
+		function adicionaZeros(i) {
+			if (i < 10) {
+				i = `0${i}`
+			}
+
+			return i
+		}
+
+		var data = new Date()
+		var dia = adicionaZeros(data.getDate())
+		var mes = adicionaZeros(data.getMonth() + 1)// +1 porque o mês é iniciado no 0
+		var ano = data.getFullYear()
+		var hora = adicionaZeros(data.getHours())
+		var minutos = adicionaZeros(data.getMinutes())
+
+		// Também aprendi sobre template strings fazendo essa tarefa. Não sei se prefiro esse ou o operador +
+		// Só sei que o fstring do python é bem melhor f"{risos}"
+		var data_formatada = `Data: ${dia}/${mes}/${ano} - Hora atual: ${hora}:${minutos}`
+		document.getElementById("data").innerHTML = data_formatada
+	</script>
 
 </body>
 </html>
