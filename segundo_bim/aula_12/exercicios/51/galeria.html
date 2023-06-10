@@ -1,16 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Javascript</title>
-<meta charset="UTF-8"/>
-<style type="text/css">
-	body {font-family: Arial}
-</style>
+	<title>Galeria de imagens</title>
+	<meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="galeria.css">
 </head>
 <body>
 
-<h1>Exercício</h1>
-<h2>Faça uma galeria de imagens Javascript utilizando as imagens disponíveis</h2>
+	<h2>Exercício</h2>
+	<p>Faça uma galeria de imagens Javascript utilizando as imagens disponíveis</p>
 
+	<section class="grid-container">
+		<div>
+			<img src="img/1p_pb.jpg" onclick="exibirFoto(1)" id="1">
+			<img src="img/2p_pb.jpg" onclick="exibirFoto(2)" id="2">
+			<img src="img/3p_pb.jpg" onclick="exibirFoto(3)" id="3">
+			<img src="img/4p_pb.jpg" onclick="exibirFoto(4)" id="4">
+			<img src="img/5p_pb.jpg" onclick="exibirFoto(5)" id="5">
+			<img src="img/6p_pb.jpg" onclick="exibirFoto(6)" id="6">
+			<img src="img/7p_pb.jpg" onclick="exibirFoto(7)" id="7">
+			<img src="img/8p_pb.jpg" onclick="exibirFoto(8)" id="8">
+			<img src="img/9p_pb.jpg" onclick="exibirFoto(9)" id="9">
+		</div>
+		<div>
+			<img src=""id="img_g">
+		</div>
+
+	</section>
+	
+	<script>
+		function formatarImagens(){
+			for (var aux=1; aux <=9; aux++) {
+				var src = document.getElementById(aux).src
+				if (src.match("img/" + aux + "p.jpg")) {
+					src = "img/" + aux + "p_pb.jpg"
+				}
+				document.getElementById(aux).src = src
+			}
+		}
+
+		function exibirFoto(id){
+			formatarImagens()
+			document.getElementById(id).src = "img/" + id + "p.jpg"
+			document.getElementById("img_g").src =  "img/" + id + ".jpg"
+		}
+	</script>
 </body>
 </html>
