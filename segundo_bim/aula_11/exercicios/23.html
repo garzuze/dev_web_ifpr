@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery (aquele ator engraçado)</title>
+	<meta charset="UTF-8"/>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$("div").prepend("<p>Apareço antes e dentro do div!</p>")
+			$("div").append("<p>Apareço depois e dentro do div!</p>");
+			$("div").before("<p>Apareço antes e fora do div!</p>")
+			$("div").after("<p>Apareço depois e fora do div!</p>")
+
+		});
+	</script>
+</head>
+
+<body>
+	<h1>Exercício</h1>
+	<h2>Utilize os métodos "append()", "prepend()", "after()" e "before()" para posicionar os novos parágrafos nos locais corretos!</h2>
+
+	<div style="background-color: #ff9;">
+		<p>Serei o segundo de dentro!</p>
+		<p>Serei o terceiro de dentro!</p>
+	</div> 
+
+
+
+</body>
+</html>

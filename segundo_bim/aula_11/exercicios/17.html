@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JQuery (aquele ator engraçado)</title>
+<meta charset="UTF-8"/>
+
+<style>
+#img_hadouken {
+	display: none;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+	$("button").click(function(){
+		$("#img_hadouken").show();
+		$("#img_hadouken").animate({'marginLeft': '300px'}, 300, function(){
+			$("#img_hadouken").hide();
+			$("#img_hadouken").css("margin-left","0px");
+			});
+	});
+});
+
+</script>
+</head>
+
+<body>
+<h1>Exercício</h1>
+<h2>Ajude Ryu a soltar um Hadouken!</h2>
+
+<button>Hadouken!</button>
+<br/>
+
+<img id="img_ryu" src="17_ryu.jpg" alt="Ryu"/>
+<img id="img_hadouken" src="17_hadouken.jpg" alt="Hadouken!"/>
+
+</body>
+</html>

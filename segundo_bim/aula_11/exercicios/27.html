@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JQuery (aquele ator engraçado)</title>
+<meta charset="UTF-8"/>
+
+<style>
+html {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+button {
+	position: absolute;
+	top: 45%;
+	left: 45%;
+}
+
+* {
+	cursor: pointer;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	$("#botaoTroll").mouseenter(function() { // Função para fazer o botão fugir
+
+		telaLargura = $("html").width(); // Pega o tamanho válido da tela (para onde o botão pode fugir)
+		telaAltura = $("html").height();
+
+		botaoLargura = $(this).width(); // Pega o tamanho do botão 
+		botaoAltura = $(this).height();
+
+		minTop = 0;
+		minLeft = 0;
+		maxTop = (telaAltura - botaoAltura); // Calcula o máximo que o botão pode se deslocar dentro da tela para que ele apareça inteiro (a tela menos ele)
+		maxLeft = (telaLargura - botaoLargura);
+
+		aleatorioTop = Math.floor(Math.random() * (maxTop - minTop + 1) + minTop); //Calcula um valor aleatório entre 0 e máximo que o botão pode ir
+		aleatorioLeft = Math.floor(Math.random() * (maxLeft - minLeft + 1) + minLeft);
+	
+		$(this).css({ // Define uma nova posição aleatória para o botão
+			"top":aleatorioTop,
+			"left":aleatorioLeft
+		});
+	});
+	
+	$("#botaoTroll").click(function() { // Função caso consiga clicar no botão
+		alert("Seu f... Parabéns! Você me venceu.");
+		$(this).text("Fuuuuuuuuuuuuuuu!");
+	});
+});
+</script>
+</head>
+
+<body class="rosaBebe">
+<h1>Exercício</h1>
+<h2>Faça o botão fugir do clique!</h2>
+
+<button id="botaoTroll">Clique-me se puder!</button>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<head>
+<script src="jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+  $(".img_botao").hover(
+		function () {
+			$(".img_botao").attr("src","foto2.jpg");
+		},
+		function () {
+			$(".img_botao").attr("src","foto.jpg");
+		}
+	);
+	
+});
+</script>
+</head>
+<body>
+
+<h1 class="teste">Alternar</h1>
+<img src="foto2.jpg" class="img_botao"/>
+</body>
+</html>

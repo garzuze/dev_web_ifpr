@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery (aquele ator engraçado)</title>
+	<meta charset="UTF-8"/>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$("button").click(function () {
+				$("#input2").val($("#input1").val())
+			})
+		});
+	</script>
+</head>
+
+<body>
+	<h1>Exercício</h1>
+	<h2>Ao clique do botão, mostre dentro do input 2 o conteúdo digitado no input 1</h2>
+
+	<label>Input 1:</label>
+	<input type="text" id="input1" placeholder="Digite aqui que aparece ali..."/>
+	<br/>
+	<button>Copia</button>
+	<br/>
+	<label>Input 2:</label>
+	<input type="text" id="input2" placeholder="Digite ali que aparece aqui..."/>
+
+</body>
+</html>

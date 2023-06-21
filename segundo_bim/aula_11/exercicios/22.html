@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JQuery (aquele ator engraçado)</title>
+<meta charset="UTF-8"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+	$("#imagem").hover(
+		function() {
+			$(this).attr("src", "22_on.png")
+		},
+		function() {
+			$(this).attr("src", "22_off.png")
+		}
+	)
+});
+</script>
+</head>
+
+<body>
+<h1>Exercício</h1>
+<h2>Acenda/apague a lâmpada ao passar o mouse sobre ela!</h2>
+
+<img id="imagem" src="22_off.png" width="200" >
+
+</body>
+</html>

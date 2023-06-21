@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery (aquele ator engraçado)</title>
+	<meta charset="UTF-8"/>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$("#demo").click(function(){
+				$(this).hide()
+			})
+		});
+
+	</script>
+</head>
+
+<body>
+	<h1>Exercício</h1>
+	<h2>Atrele uma função ao clique do parágrafo indicado que faça o parágrafo sumir.</h2>
+
+	<p id="demo" style="cursor:pointer;">Eu devo desaparecer...</p>
+
+</body>
+</html>

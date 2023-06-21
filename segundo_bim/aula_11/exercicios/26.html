@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery (aquele ator engraçado)</title>
+	<meta charset="UTF-8"/>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$("#botao_negrito").click(function(){
+				$("#demo").css("font-weight", "bold")
+			})
+
+			$("#botao_italico").click(function(){
+				$("#demo").css("font-style", "italic")
+			})
+
+			$("#botao_vermelho").click(function(){
+				$("#demo").css("color", "red")
+			})
+		});
+	</script>
+</head>
+
+<body class="rosaBebe">
+	<h1>Exercício</h1>
+	<h2>Utilize o método ".css("propriedade","valor")" para alterar o estilo do parágrafo indicado de acordo com o botão clicado.</h2>
+
+	<button id="botao_negrito">Negrito</button>
+	<button id="botao_italico">Itálico</button>
+	<button id="botao_vermelho">Vermelho</button>
+	<br/>
+	<p id="demo">Este texto deve ter o estilo trocado de acordo com o botão clicado!</p>
+
+</body>
+</html>

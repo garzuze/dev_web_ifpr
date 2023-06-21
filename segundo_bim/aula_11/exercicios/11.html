@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery (aquele ator engraçado)</title>
+	<meta charset="UTF-8"/>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$("button").click(function() {
+				$("#demo").toggle()
+			})
+		});
+
+	</script>
+</head>
+
+<body>
+	<h1>Exercício</h1>
+	<h2>Utilize o método "toggle()" para esconder e mostrar o parágrafo indicado sempre o botão for clicado.</h2>
+
+	<button>Toggle!</button>
+	<p id="demo">Sou indeciso.</p>
+
+
+</body>
+</html>

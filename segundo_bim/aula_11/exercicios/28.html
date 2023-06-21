@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery (aquele ator engraçado)</title>
+	<meta charset="UTF-8"/>
+
+	<style>
+		.clique_desliza {
+			height:20px;
+			padding:5px;
+			margin: 0px;
+			text-align:center;
+			background:#ddd;
+			border:solid 1px #999;
+			cursor: pointer;
+		}
+
+		.painel_desliza {
+			margin-bottom:10px;
+			padding: 5px 10px 5px 10px;
+			display:none;
+			background:#eee;
+			border:solid 1px #999;
+		}
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$(".clique_desliza").click(function(){
+				$(this).next().slideToggle("slow");	
+	</script>
+</head>
+
+<body>
+	<h1>Exercício</h1>
+	<h2>Faça com que cada barra "Curiosidade N", ao ser clicada, abra sua respectiva seção &lt;div&gt; (oculta no HTML).<br/> 
+	Utilize "slideToggle("slow")" como método para "deslizar" o &lt;div&gt;.</h2>
+
+	<div>
+		<p class="clique_desliza">Curiosidade 1 - Formigas Velozes e Furiosas: A Saga da Saharan Silver</p>
+		<div class="painel_desliza">
+			<p>A formiga do tipo Saharan silver, encontrada no deserto do Saara, é conhecida por ser a espécie de formiga mais rápida do mundo, chegando a atingir velocidades de até um metro por segundo.</p>
+		</div>
+
+		<p class="clique_desliza">Curiosidade 2 - Rave na Floresta: Os Cogumelos que Brilham no Escuro</p>
+		<div class="painel_desliza">
+			<p>Existem cogumelos bioluminescentes que emitem luz no escuro. Por exemplo, o Panellus stipticus possui uma enzima que produz uma substância química que causa essa bioiluminação, criando um efeito mágico em florestas escuras.</p>
+		</div>
+
+		<p class="clique_desliza">Curiosidade 3 - Visão Retangular: As Cabras que Enxergam em Pixel</p>
+		<div class="painel_desliza">
+			<p>Você sabia que as cabras têm pupilas retangulares? Essa peculiaridade permite que elas tenham um amplo campo de visão e uma excelente percepção de profundidade, o que é útil para saltar entre rochas e montanhas.</p>
+		</div>
+
+		<p class="clique_desliza">Curiosidade 4 - O Reino do Fungo Gigante: Uma Aventura com o Honey Mushroom</p>
+		<div class="painel_desliza">
+			<p>O maior organismo vivo conhecido é um fungo chamado Armillaria ostoyae, também conhecido como "Honey Mushroom" (cogumelo do mel). Ele se estende por aproximadamente 8,9 quilômetros quadrados na Floresta Nacional de Malheur, no estado de Oregon, EUA.</p>
+		</div>
+
+		<div>
+		</body>
+		</html>

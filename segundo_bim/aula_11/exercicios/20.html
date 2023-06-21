@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery (aquele ator engraçado)</title>
+	<meta charset="UTF-8"/>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$("#demo").text($("#input_demo").attr("value"))
+		});
+	</script>
+</head>
+
+<body>
+	<h1>Exercício</h1>
+	<h2>Mostre dentro do parágrafo indicado o conteúdo do input</h2>
+
+	<label>Nome:</label>
+	<input type="text" id="input_demo" placeholder="Digite seu nome" value="Batata"/>
+
+	<p id='demo'>O nome deve aparecer aqui!</p>
+
+</body>
+</html>

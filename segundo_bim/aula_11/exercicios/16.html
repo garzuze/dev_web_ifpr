@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery (aquele ator engraçado)</title>
+	<meta charset="UTF-8"/>
+
+	<style>
+		#div_parchment1 {
+			background-image: url("16_1.jpg");
+			height:63px;
+			width:440px;
+		}
+		#div_parchment2 {
+			background-image: url("16_2.jpg");
+			height:340px; 
+			width:340px;
+			display:none; 
+			padding: 50px; 
+			text-align: center;
+		}
+		#div_parchment3 {
+			background-image: url("16_3.jpg");
+			height:60px; 
+			width:440px;
+		}
+		a {
+			font-size: 24pt; 
+			color: black;
+		}
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+		    // Ao clique do botão, faça o div do pergaminho (div_parchment2) ser revelado ou ocultado (utilize o método "slideToggle(duração)").
+			$("button").click(function(){
+                $("#div_parchment2").slideToggle(1000)
+            })
+		});
+
+	</script>
+</head>
+
+<body>
+	<h1>Exercício</h1>
+	<h2>Revele o pergaminho!</h2>
+
+	<button>Revelar o segredo!</button>
+	<br/>
+
+	<div id="div_parchment1"></div>
+	<div id="div_parchment2">
+		<a href="http://i.ytimg.com/vi/P2ANMgr4nm8/maxresdefault.jpg">Clique aqui e descubra por que "eduapu"!!!</a>
+	</div>
+	<div id="div_parchment3"></div>
+
+</body>
+</html>

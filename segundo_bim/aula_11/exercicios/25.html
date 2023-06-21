@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery (aquele ator engraçado)</title>
+	<meta charset="UTF-8"/>
+
+	<style>
+		.rosaBebe {
+			background-color: #FDD;
+		}
+		.azulBebe {
+			background-color: #DDF;
+		}
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+	/* 	Utilize o comando
+			$("body").toggleClass("azulBebe");
+		no clique do botão.
+	*/
+			$("button").click(function(){
+				$("body").toggleClass("azulBebe");
+			})
+		});
+	</script>
+</head>
+
+<body class="rosaBebe">
+	<h1>Exercício</h1>
+	<h2>Ao clique do botão, troque a cor de fundo da página</h2>
+
+	<button>Trocar de cor!</button>
+
+</body>
+</html>

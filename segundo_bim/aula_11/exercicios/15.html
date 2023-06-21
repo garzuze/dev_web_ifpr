@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JQuery (aquele ator engraçado)</title>
+    <meta charset="UTF-8"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+    // Ao clique do botão, faça a imagem do hadouken aparecer (utilize o método "show()") e, em seguida, sumir ("fadeOut(300)").
+            $("button").click(function(){
+                $("img").show("img_hadouken.jpg")
+                $("img").fadeOut(2000)
+            })
+        });
+
+    </script>
+</head>
+
+<body>
+    <h1>Exercício</h1>
+    <h2>Ajude Ryu a soltar um Hadouken!</h2>
+
+    <button>Hadouken!</button>
+    <br/>
+
+    <img id="img_ryu" src="15_ryu.jpg" alt="Ryu"/>
+    <img id="img_hadouken" src="15_hadouken.jpg" alt="Hadouken!" style="display:none;"/>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery (aquele ator engraçado)</title>
+	<meta charset="UTF-8"/>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("div").fadeIn(5000)
+			})
+		});
+
+	</script>
+</head>
+
+<body>
+	<h1>Exercício</h1>
+	<h2>Utilize o método "fadeIn(duraçãoEmMilissegundos)" para mostrar o quadrado lentamente (5 seg) quando o botão for clicado.</h2>
+
+	<button>Apareça!</button>
+
+	<div style="width:100px; height:100px; background-color:#090; display:none;"></div>
+
+</body>
+</html>
