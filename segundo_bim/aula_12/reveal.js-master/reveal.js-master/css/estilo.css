@@ -1,0 +1,10 @@
+ul {
+  list-style: none; /* Remove default bullets */
+}
+
+ul li::before {
+  color: #00BF63; /* Change the color */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}

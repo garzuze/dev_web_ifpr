@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>SEPAIS</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-transition="convex">
+					<img src="images/sepais.png" alt=".sepais logo" style="height: 220px; margin: 0 auto; background: transparent;" class="fragment fade-down">
+				<p>
+					<span class="fragment highlight" style="color: #016D39">Lucas Garzuze Cordeiro, </span> <span class="fragment highlight" style="color: #00BF63">Pietro F. A. Sotile</span><span class="fragment highlight" style="color: #05FA84"> e Victor H. R. Macharete</span>
+					<br>
+					<span class="fragment highlight" style="color: #05FAE4; text">Orientador: Prof. Dr. Eduardo Tieppo</span>
+				</p>
+				</section>
+				<section data-transition="zoom">
+					<h2 style="color: #016D39" class="fragment grow">Lacuna de Pesquisa</h2>
+					<ul style="list-style-type:circle">
+						<li class="fragment fade-in">Falta de segurança</li>
+						<li class="fragment fade-in">Demora para autorização da saída</li>
+						<li class="fragment fade-in">Sobrecarga dos servidores da SEPAE e da portaria</li>
+					</ul>
+				</section>
+				<section data-transition="none">
+					<section>
+						<h1 style="color: #016D39" class="fragment grow">Objetivo Geral</h1>
+						<p class="fragment fade-right">Criar um sistema que gerencie a entrada e saída de alunos</p>
+					</section>
+					<section>
+						<h2 style="color: #016D39" class="fragment grow">Objetivos Específicos</h2>
+						<ul>
+							<li class="fragment fade-right">Criar uma ferramenta que funcione como um canal de comunicação entre a SEPAE e os pais.</li>
+							<li class="fragment fade-right">Possibilitar um trabalho mais dinâmico por parte da SEPAE e da PORTARIA</li>
+							<li class="fragment fade-right">Elaborar uma função que notifique os pais dos horários da saída dos alunos</li>
+							<li class="fragment fade-right">Criar um sistema de controle das faltas justificadas</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h2 style="color: #016D39" class="fragment grow">Metódo Principal</h2>
+						<ul>
+							<li class="fragment fade-right">Para os usuários <b>SEPAE e PORTARIA</b>: site desktop, baseado em <span style="color: #05FA84">Django</span> (inclui HTML, CSS e JS)</li>
+							<li class="fragment fade-right">Para os usuários <b>PAIS DOS ALUNOS</b>: aplicativo feito em <span style="color: #2596be">Dart</span> (framework flutter)</li>
+						</ul>
+						<img src="images/django.png" class="fragment fade-in" height="70px">
+						<img src="images/flutter-dart.png" class="fragment fade-in" height="70px">
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
