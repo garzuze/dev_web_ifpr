@@ -19,7 +19,7 @@
                 <input type="password" name="password" class="mt-4 p-2 bg-gray-100 border-0 rounded-xl w-full" required>
                 <input type="submit" name="submit" value="Enviar" class="w-full bg-blue-100 rounded-xl p-4 mt-4 hover:shadow-xl">
             </form>
-        <div>
+        <div class="text-center mt-6">
             <h2 class="text-xl font-bold">Novo por aqui?</h2>
             <a href="signup.php">Cadastrar-se</a>
         </div>
