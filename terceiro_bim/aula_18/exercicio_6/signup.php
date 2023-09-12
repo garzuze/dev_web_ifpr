@@ -9,20 +9,17 @@
 </head>
 
 <body>
+    <!-- Como eu quero inserir senhas criptografas no meu banco, achei necessário implementar uma funcionalidade de cadastro. Mesmo que bem simples, isso deixará o sistema mais apropriado e seguro. -->
     <section class="mx-0 my-4 text-center">
-        <h1 class="text-3xl font-bold">Login</h1>
+        <h1 class="text-3xl font-bold">Cadastro</h1>
         <div class="max-w-sm mt-6 p-6 mx-auto text-left rounded-lg shadow-xl">
-            <form action="validate.php" method="post">
+            <form action="insert.php" method="post">
                 <label class="text-l">Digite seu e-mail:</label><br>    
                 <input type="email" name="email" class="my-4 p-2 bg-gray-100 border-0 rounded-xl w-full" required><br>
                 <label class="text-l">Digite sua senha:</label><br>    
                 <input type="password" name="password" class="mt-4 p-2 bg-gray-100 border-0 rounded-xl w-full" required>
                 <input type="submit" name="submit" value="Enviar" class="w-full bg-blue-100 rounded-xl p-4 mt-4 hover:shadow-xl">
             </form>
-        <div>
-            <h2 class="text-xl font-bold">Novo por aqui?</h2>
-            <a href="signup.php">Cadastrar-se</a>
-        </div>
     </section>
 </body>
 

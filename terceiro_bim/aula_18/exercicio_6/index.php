@@ -1,5 +1,5 @@
 <?php 
-include('seguranca.php')
+include('secure.php')
 ?>
 <!DOCTYPE html>
 <html lang="en">
