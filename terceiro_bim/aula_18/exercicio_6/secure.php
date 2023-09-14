@@ -1,6 +1,5 @@
 <?php
-function connect()
-{
+function connect() {
     // =========== Configuração ==============
     $_DB['server'] = 'localhost'; // Servidor MySQL
     $_DB['user'] = 'root'; // Usuário MySQL
@@ -19,12 +18,6 @@ function connect()
     }
 }
 
-function secure_page(){
-    if(!isset($_SESSION['email']) && !isset($_SESSION['password'])){
-        expel_user();
-    }
-}
-
 function verify_user($email, $password){
     $sql = connect();
     // Primeiro, verificamos se o e-mail existe.
@@ -37,27 +30,24 @@ function verify_user($email, $password){
         // Agora, comparamos a senha inserida com a senha no banco de dados
         $result_array = $result_query->fetch_all(MYSQLI_ASSOC);
         $stored_password = $result_array[0]['password'];
-        if (password_verify($password, $stored_password)){
+        if (password_verify($password, $stored_password)) {
             // As senhas coincidem, o usuário é logado
             $_SESSION['email'] = $email;
             $_SESSION['password'] = $password;
             header('Location: index.php');
         } else {
-            // As senhas não coincidem, o usuário não é logado
-            expel_user();
+            // Senha não coincide, usuário redirecionado para login
+            secure_page();
         }
-  
     } else {
         // Usuário não encontrado no banco de dados
-        echo "<script> alert('Usuário não encontrado! Redirecionando para cadastro.); </script>";
         header('Location: signup.php');
     }
 }
 
-function expel_user(){
-    session_start();
-    session_destroy();
-    header('Location: login.php');
+function secure_page() {
+    if (!isset($_SESSION['email']) && !isset($_SESSION['password'])) {
+        session_destroy();
+        header('Location: login.php');
+    }
 }
-
-?>

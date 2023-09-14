@@ -1,5 +1,11 @@
 <?php 
-include('secure.php')
+session_start();
+include('secure.php');
+secure_page();
+if (isset($_POST['logout'])){
+    session_destroy();
+    header('Location: login.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,8 +21,8 @@ include('secure.php')
     <section class="mx-0 my-4 text-center">
         <h1 class="text-3xl font-bold">Seja bem vindo!</h1>
         <p>Só de boa?</p>
+        <form method="post"><input type="submit" name="logout" value="logout"></form>
     </section>
-    <button onclick="<?php expel_user(); ?>">logout</button>
 </body>
 
 </html>
