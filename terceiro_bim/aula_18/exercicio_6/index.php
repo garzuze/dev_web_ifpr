@@ -16,6 +16,7 @@ include('secure.php')
         <h1 class="text-3xl font-bold">Seja bem vindo!</h1>
         <p>Só de boa?</p>
     </section>
+    <button onclick="<?php expel_user(); ?>">logout</button>
 </body>
 
 </html>
