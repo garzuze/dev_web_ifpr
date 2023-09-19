@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estados e cidades!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: 'read_estados.php',
+            type: 'get',
+            success: function (data) {
+                data = JSON.parse(data)
+                // console.log(data); //  se quiser ver o que o servidor retorna
+                $.each(data, function (key, value) {
+                    $('#select_estado').append($('<option>', {value:value.uf, text:value.estado}))
+                })
+
+            }
+        })
+    });
+</script>
+
+<body>
+    <form>
+        <label>Selecione o Estado:</label>
+        <select id="select_estado">
+        </select>
+    </form>
+</body>
+
+</html>
