@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estados e cidades!</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
 </head>
 <script>
     $(document).ready(function () {
@@ -16,19 +17,47 @@
                 data = JSON.parse(data)
                 // console.log(data); //  se quiser ver o que o servidor retorna
                 $.each(data, function (key, value) {
-                    $('#select_estado').append($('<option>', {value:value.uf, text:value.estado}))
+                    $('#select_estado').append($('<option>', { value: value.uf, text: value.estado }))
                 })
 
             }
+        })
+
+        $('#select_estado').on('change', function () {
+            var estado = $(this).val();
+            $.ajax({
+                url: 'read_cidades.php',
+                data: 'estado=' + estado,
+                type: 'POST',
+                success: function (data) {
+                    data = JSON.parse(data)
+
+                    $("option[id='place_holder']").remove(); // Remove o placeholder
+                    $('#cidades').removeAttr('hidden'); // Faz as tags aparecerem
+                    $('#select_cidade').empty(); // Limpa as options, para garantir que sempre serão somente da cidade selecionada
+
+                    $.each(data, function (key, value) {
+                        $('#select_cidade').append($('<option>', { value: value.cidade, text: value.cidade }));
+                    })
+                }
+            })
         })
     });
 </script>
 
 <body>
-    <form>
-        <label>Selecione o Estado:</label>
-        <select id="select_estado">
-        </select>
+    <form method="post">
+        <div id="estados">
+            <label>Selecione o Estado:</label>
+            <select id="select_estado">
+                <option id="place_holder">Selecione o Estado</option>
+            </select>
+        </div>
+        <div id="cidades" hidden>
+            <label id="label_cidade">Selecione a cidade:</label>
+            <select id="select_cidade">
+            </select>
+        </div>
     </form>
 </body>
 
