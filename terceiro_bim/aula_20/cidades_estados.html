@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estados e cidades!</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 <script>
@@ -46,19 +47,24 @@
 </script>
 
 <body>
-    <form method="post">
-        <div id="estados">
-            <label>Selecione o Estado:</label>
-            <select id="select_estado">
-                <option id="place_holder">Selecione o Estado</option>
-            </select>
-        </div>
-        <div id="cidades" hidden>
-            <label id="label_cidade">Selecione a cidade:</label>
-            <select id="select_cidade">
-            </select>
-        </div>
-    </form>
+    <div class="mx-auto w-1/2 mt-6">
+        <form method="post">
+            <div id="estados">
+                <label class="block my-2 font-medium text-gray-900">Selecione o Estado:</label>
+                <select id="select_estado"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <option disabled selected value></option>
+                </select>
+            </div>
+            <div id="cidades" hidden>
+                <label class="block my-2 font-medium text-gray-900">Selecione a cidade:</label>
+                <select id="select_cidade"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <option disabled selected value></option>
+                </select>
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>
