@@ -32,10 +32,9 @@
                 type: 'POST',
                 success: function (data) {
                     data = JSON.parse(data)
-
-                    $("option[id='place_holder']").remove(); // Remove o placeholder
                     $('#cidades').removeAttr('hidden'); // Faz as tags aparecerem
-                    $('#select_cidade').empty(); // Limpa as options, para garantir que sempre serão somente da cidade selecionada
+                    $('#select_cidade').empty(); // Limpa as options anteriores
+                    $('#select_cidade').append('<option disabled selected value></option>'); // Adiciona opção vazia
 
                     $.each(data, function (key, value) {
                         $('#select_cidade').append($('<option>', { value: value.cidade, text: value.cidade }));
@@ -43,6 +42,14 @@
                 }
             })
         })
+
+        $('#select_cidade').on('change', function() {
+            var cidade = $(this).val();
+            var estado = $('#select_estado').val();
+            $('#mapa').empty(); // Limpa para garantir que sempre será o mapa da cidade selecionada
+            $('#mapa').append('<iframe class="w-full h-96 my-6" src="https://www.google.com/maps/embed/v1/place?q=' + cidade + ',+' + estado +'&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>');
+        })
+
     });
 </script>
 
@@ -52,18 +59,20 @@
             <div id="estados">
                 <label class="block my-2 font-medium text-gray-900">Selecione o Estado:</label>
                 <select id="select_estado"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                     <option disabled selected value></option>
                 </select>
             </div>
             <div id="cidades" hidden>
                 <label class="block my-2 font-medium text-gray-900">Selecione a cidade:</label>
                 <select id="select_cidade"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                    <option disabled selected value></option>
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                 </select>
             </div>
         </form>
+        <div id="mapa">
+
+        </div>
     </div>
 </body>
 
